@@ -1,0 +1,66 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+#root {
+ font-family: 'Manrope', sans-serif;
+ 
+}
+.text-gradient{
+  background: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%), #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.bggra{
+  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+
+}
+
+
+.navani {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.mytransform{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.backblur{
+  background: #002853;;
+  filter: blur(200px);
+}
+.blueblure{
+  background: #0F4279;
+filter: blur(60px);
+}
+.bottomblur{
+  background: #1B78DE;
+filter: blur(100px);
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translateX(0);
+  }
+}
