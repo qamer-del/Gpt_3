@@ -8,7 +8,7 @@ const GetStared = () => {
     transition={{duration:0.5}}
     
     id='#' className=" container mx-auto">
-    <div className="  bggra rounded-[10.7236px] flex md:flex-row flex-col py-10 justify-between p-5  ">
+    <div className="  bggra rounded-[10.7236px] flex md:flex-row flex-col md:py-16 py-10 justify-between p-5   ">
       <div>
         <p className=' font-medium text-xs '>Request Early Access to Get Started</p>
         <h3 className=' font-extrabold md:text-2xl text-xl my-10 md:my-0'>Register today & start exploring the endless possiblities.</h3>

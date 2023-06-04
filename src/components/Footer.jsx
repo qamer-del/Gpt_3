@@ -4,7 +4,7 @@ import { footerLinks } from '../constants'
 
 const Footer = () => {
   return (
-    <div className=" bg-secondary">
+    <div className=" bg-primarytow">
     <div className=" container mx-auto justify-center flex md:flex-row flex-col  items-center gap-3 ">
         <div className=' w-full'>
           <img src={logo} className='object-contain' />
