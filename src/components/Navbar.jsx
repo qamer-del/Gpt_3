@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { logo ,close, menue } from "../assets";
 import { navLinks } from "../constants";
+import { motion } from "framer-motion";
+const variants = {
+  open: { opacity: 1, y: 0 },
+  closed: { opacity: 0, y: "100%" },
+}
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
@@ -20,15 +25,17 @@ const Navbar = () => {
            <button className='flex bg-transparent items-center justify-between px-6 gap-2 text-white'>Sign in</button>
            <button className=' p-3 px-10 rounded-[5px] bg-btn text-white font-medium text-base'>Sign Up</button>
       </div>
-        <img src={toggle ? close : menue}alt="menue"className="md:hidden flex w-[28px] h-[28px] object-contain "onClick={() => setToggle(!toggle)}/>
-      <div
+        <img src={toggle ? close : menue}alt="menue"className="md:hidden flex w-[28px] h-[28px] object-contain z-[1] "onClick={() => setToggle(!toggle)}/>
+      < motion.div
+      animate={toggle ? "open" : "closed"}
+      variants={variants}
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6  text-white absolute z-[1] top-10 right-0 w-full rounded-xl md:hidden bg-parimary navani `}
+          } p-6  text-white absolute z-[1] top-20  right-0 w-full mx-auto rounded-3xl md:hidden bggra  `}
         >
-          <ul className="list-none flex justify-center items-center flex-1 flex-col hover:rounded-md bg-primary">
+          <ul className="list-none flex justify-center items-center flex-1 flex-col hover:rounded-md ">
             {navLinks.map((nav) => (
-              <li className="p-2 hover:bg-font w-[50%] m-auto duration-1000   "   onClick={() => setActive(nav.title)}>
+              <li className="p-2 hover:bg-secondary w-[50%] m-auto duration-1000   "   onClick={() => setActive(nav.title)}>
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
@@ -36,7 +43,7 @@ const Navbar = () => {
            <button className=" w-[50%] bg-btn p-2 m-auto rounded-md mt-2 hover:bg-font duration-1000 " >Sign Up</button>
           </ul>
           
-        </div>
+        </ motion.div>
  
      
      </div>
